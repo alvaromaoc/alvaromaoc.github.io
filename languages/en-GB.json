@@ -1,0 +1,75 @@
+{
+    "languages": {
+        "en-GB": "English (UK)",
+        "es-ES": "Spanish (ES)"
+    },
+    "literal": {
+        "dark-mode": "Dark mode",
+        "language": "Language",
+        "native": "Native",
+        "now": "Now",
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    },
+    "header": {
+        "name": "Álvaro Mañoso Oca",
+        "quote": "Full Stack Software Engineer living in Barcelona"
+    },
+    "welcome": {
+        "title": "Welcome!",
+        "body": "I'm Álvaro and you're visiting my personal portfolio. Take a look and don't hesitate to contact me!"
+    },
+    "experience": {
+        "title": "Professional experience",
+        "gft": {
+            "name": "GFT Group",
+            "description": "Development and management of software applications, in a microservices based architecture, following quality and efficiency standards. Working within an internacional development team backed by a Scrum project management strategy."
+        },
+        "ithinkupc": {
+            "name": "IThinkUPC",
+            "description": "Development and management of software applications, mostly monolitic, following quality and efficiency standards. Working on the complete life cycle of these applications, from the gathering of requirements to their deployment and maintenance."
+        },
+        "position": {
+            "backend-software-engineer-skilled": "Backend Software Engineer - Skilled",
+            "fullstack-software-developer-junior": "FullStack Software Developer - Junior",
+            "fullstack-software-developer-intern": "FullStack Software Developer - Intern"
+        }
+    },
+    "education": {
+        "title": "Education",
+        "general-education": "General education",
+        "gei": {
+            "title": "Bachelor's degree in Informatics Engineering",
+            "major": "Major in Computing"
+        },
+        "school": {
+            "title": "Primary, Middle School and Baccalaureate"
+        },
+        "languages": {
+            "title": "Languages",
+            "english-level": "Medium/High (B2 in CEFR scale)",
+            "english-description": "Excellent reading and listening comprehension and fluent speaking in professional and non-professional environments.",
+            "french-level": "Medium (DELF B1)",
+            "french-description": "Good reading and listening comprehension and basic speaking skills in non-profesional environments."
+        },
+        "place": {
+            "fib-upc": "Facultat d'Informàtica de Barcelona (FIB), Universitat Politècnica de Catalunya (UPC)",
+            "fit-cvut": "Fakulta informačních technologií (FIT), České vysoké učení technické v Praze (ČVUT)",
+            "stj": "Col·legi Santa Teresa Ganduxer",
+            "ien": "Institut d'Estudis Nord-Americans"
+        }
+    },
+    "footer": {
+        "contact-me": "Contact me!"
+    }
+}

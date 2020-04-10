@@ -1,0 +1,19 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.face img {
+  width: 100%;
+  max-width: 400px;
+  padding: 50px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #16a085;
+}
+
+a:hover {
+  color: #1abc9c;
+}
