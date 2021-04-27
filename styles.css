@@ -73,20 +73,6 @@ p {
     text-align: justify;
 }
 
-.nav-link {
-    border-left: 5px solid #ffe7d4;
-    color: black;
-}
-
-.nav-link.active {
-    border-left: 5px solid #494e5f;
-}
-
-.side {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
 .main {
     border-radius: 10px;
 }
