@@ -1,51 +1,54 @@
-var availableLanguages = [];
+function setCookie(name, value, validityDays) {
+    var allowed = name === 'cookiesEnabled' || getCookie('cookiesEnabled') === 'true';
+    if (allowed) {
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + validityDays);
+        const cookieValue = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
+        document.cookie = cookieValue;
+    }
+}
 
-function setTheme() {
-    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkThemeMq.matches) {
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split('=');
+        if (cookieName === name) {
+            return cookieValue;
+        }
+    }
+    return null;
+}
+
+function setTheme(isDark) {
+    if (isDark) {
         document.documentElement.setAttribute("data-bs-theme", "dark");
     } else {
         document.documentElement.removeAttribute("data-bs-theme");
     }
+
+    setCookie('prefersColorScheme', isDark ? "dark" : "light", 365);
 }
 
-function setLanguage() {
-    var language = new URLSearchParams(new URL(window.location.href).search).get("lang") || navigator.language || navigator.userLanguage;
-    if (!availableLanguages.includes(language)) {
-        language = "en-GB";
+function isDark(value) {
+    if (value === null) {
+        return null;
     }
-    document.documentElement.lang = language;
-
-    forEachLanguageSelector((li, a) => {
-        if (a.getAttribute("value") == document.documentElement.lang) {
-            li.classList.add("d-none");
-        }
-    });
-
-    return language;
+    if (value === 'dark') {
+        return true;
+    }
+    if (value === 'light') {
+        return false;
+    }
+    throw 'Parse error: unresolvable scheme type "' + value + '"';
 }
 
-function initLanguageSelector() {
-    forEachLanguageSelector((li, a) => {
-        var value = a.getAttribute("value");
-            availableLanguages.push(value);
+function getCurrentHoursAndMinutes() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
 
-            var baseURL = window.location.origin + window.location.pathname;
-            a.href = baseURL + '?lang=' + value;
-    });
-}
+    const formattedHours = `${hours}`;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
 
-function forEachLanguageSelector(callbackFn) {
-    Array.from(document.getElementById("langSelector").querySelectorAll("li"))
-        .map(element => [element, element.querySelectorAll("a")[0]])
-        .filter(element => element[1] !== null)
-        .forEach(a => {
-            callbackFn(a[0], a[1]);
-        });
-}
-
-function init() {
-    initLanguageSelector();
-    setLanguage();
-    translateDocument(`/languages/${document.documentElement.lang}.json`, "waffle-lang").then(() => { });
+    return `${formattedHours}:${formattedMinutes}`;
 }

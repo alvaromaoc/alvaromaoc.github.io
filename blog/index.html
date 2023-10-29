@@ -1,0 +1,35 @@
+---
+layout: page
+title: Blog
+---
+{% for post in paginator.posts %}
+<article class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
+  <h2>{{ post.title }}</h2>
+  <small>{{ post.date | date_to_string }}</small>
+  <hr class="my-4">
+  <div>
+    {{ post.content }}
+  </div>
+</article>
+{% endfor %}
+
+<div class="d-flex justify-content-center align-items-center">
+  <nav aria-label="Articles pagination">
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+        {% if paginator.page == 1 %}
+          <li class="page-item"><a class="page-link" href="{{ '/' | absolute_url }}">Newer</a></li>
+        {% else %}
+          <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a></li>
+        {% endif %}
+      {% else %}
+        <li class="page-item"><a class="page-link disabled">Newer</a></li>
+      {% endif %}
+      {% if paginator.next_page %}
+        <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">Older</a></li>
+      {% else %}
+        <li class="page-item"><a class="page-link disabled">Older</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>

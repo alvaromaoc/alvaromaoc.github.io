@@ -1,298 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: page
+title: Home
+---
+<!-- Weclome  -->
+<section id="welcome" class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
+  <h3>Welcome!</h3>
+  <p class="text-justify mb-0">
+    I'm Álvaro and you're visiting my personal portfolio. Take a look and don't hesitate to contact me!
+  </p>
+</section>
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QJERRX7SQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-4QJERRX7SQ');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Full Stack Software Engineer living in Barcelona. Graduate in Informatic Engineering from Universitat Politècnica de Catalunya" />
-
-    <title>Álvaro Mañoso Oca | Full Stack Software Engineer</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel=“canonical” href="https://alvaromaoc.dev" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
-
-    <script src="js/multi-language.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-        setTheme();
-    </script>
-</head>
-
-<body class="bg-body">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" id="navbarList">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" waffle-lang="literal.language">Language</a>
-                        <ul class="dropdown-menu" id="langSelector">
-                            <li><a class="dropdown-item" role="button" value="en-GB">English (UK)</a></li>
-                            <li><a class="dropdown-item" role="button" value="es-ES">Español (ES)</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="#welcome" class="nav-link" waffle-lang="welcome.title">Welcome!</a>
-                    </li>
-                    <li class="nav-item"><a href="#education" class="nav-link"
-                            waffle-lang="education.title">Education</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link"
-                            waffle-lang="experience.title">Professional experience</a></li>
-                </ul>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="darkMode">
-                <label class="form-check-label" for="darkMode" waffle-lang="literal.dark-mode">Dark mode</label>
-            </div>
-            <script>
-                const darkModeSwitch = document.getElementById('darkMode');
-                if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
-                    darkModeSwitch.checked = true;
-                } else {
-                    darkModeSwitch.checked = false;
-                }
-                darkModeSwitch.addEventListener('click', function () {
-                    if (darkModeSwitch.checked) {
-                        document.documentElement.setAttribute("data-bs-theme", "dark");
-                    } else {
-                        document.documentElement.removeAttribute("data-bs-theme");
-                    }
-                });
-            </script>
+<!-- Education  -->
+<section id="education" class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
+  <h3>Education</h3>
+  <div class="align-items-start">
+    <h4>General education</h4>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5> Bachelor's degree in Informatics Engineering</h5>
+      <p>Major in Computing</p>
+      <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Facultat d'Informàtica de Barcelona (FIB), Universitat Politècnica de Catalunya (UPC)
+          </h6>
+          <small>
+            <span>September</span> 2020
+            <span>&gt;</span>
+            <span>June</span> 2022
+          </small>
         </div>
-    </nav>
-    <header class="p-5 row flex-lg-row-reverse container m-auto">
-        <div class="col-lg-6 face d-flex justify-content-center align-items-center">
-            <img src="img/face.png" alt="Portrait image" style="width: 250px;">
+        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
+          <i class="bi bi-arrow-up d-block d-lg-none"></i>
+          <i class="bi bi-arrow-right d-none d-lg-block"></i>
+        </span>
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Fakulta informačních technologií (FIT), České vysoké učení technické v Praze (ČVUT)
+          </h6>
+          <small>
+            <span>September</span> 2022
+            <span>&gt;</span>
+            <span>February</span> 2023
+          </small>
         </div>
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <h1 class="text-break" waffle-lang="header.name">Álvaro Mañoso Oca</h1>
-            <h2 class="text-break" waffle-lang="header.quote">Full Stack Software Engineer living in Barcelona</h2>
+      </div>
+    </div>
+
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>Primary, Middle School and Baccalaureate</h5>
+      <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Col·legi Santa Teresa Ganduxer
+          </h6>
+          <small>
+            <span>September</span> 2003
+            <span>&gt;</span>
+            <span>June</span> 2018
+          </small>
         </div>
-    </header>
-    <main class="container">
-        <!-- Weclome  -->
-        <section id="welcome"
-            class="section bg-body-tertiary bg-content my-3 p-4 p-sm-5 col-md-12 d-block rounded slide-up">
-            <h3 waffle-lang="welcome.title">Welcome!</h3>
-            <p class="text-justify mb-0" waffle-lang="welcome.body">
-                I'm Álvaro and you're visiting my personal portfolio. Take a look and don't hesitate to contact me!
-            </p>
-        </section>
+      </div>
+    </div>
 
-        <!-- Education  -->
-        <section id="education"
-            class="section bg-body-tertiary bg-content my-3 p-4 p-sm-5 col-md-12 d-block rounded slide-up">
-            <h3 waffle-lang="education.title">Education</h3>
-            <div class="align-items-start">
-                <h4 waffle-lang="education.general-education">General education</h4>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5 waffle-lang="education.gei.title"> Bachelor's degree in Informatics Engineering</h5>
-                    <p waffle-lang="education.gei.major">Major in Computing</p>
-                    <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="education.place.fib-upc">
-                                Facultat d'Informàtica de Barcelona (FIB), Universitat Politècnica de Catalunya (UPC)
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2020
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.june">June</span> 2022
-                            </small>
-                        </div>
-                        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
-                            <i class="bi bi-arrow-up d-block d-lg-none"></i>
-                            <i class="bi bi-arrow-right d-none d-lg-block"></i>
-                        </span>
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="education.place.fit-cvut">
-                                Fakulta informačních technologií (FIT), České vysoké učení technické v Praze (ČVUT)
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2022
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.february">February</span> 2023
-                            </small>
-                        </div>
-                    </div>
-                </div>
+    <h4 class="mt-4">Languages</h4>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>English</h5>
+      <p>Medium/High (B2 in CEFRscale)</p>
+      <p class="mb-3">
+        Excellent reading and listening comprehension and fluent speaking in professional and
+        non-professional environments.
+      </p>
+      <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Institut d'Estudis Nord-Americans
+          </h6>
+          <small>
+            <span>September</span> 2017
+            <span>&gt;</span>
+            <span>June</span> 2019
+          </small>
+        </div>
+        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
+          <i class="bi bi-plus d-block d-lg-none"></i>
+          <i class="bi bi-plus d-none d-lg-block"></i>
+        </span>
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Col·legi Santa Teresa Ganduxer
+          </h6>
+          <small>
+            <span>September</span> 2003
+            <span>&gt;</span>
+            <span>June</span> 2018
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>Français</h5>
+      <p>Medium (DELF B1)</p>
+      <p class="mb-3">
+        Good reading and listening comprehension and basic speaking skills in non-profesional
+        environments.
+      </p>
+      <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+        <h6>
+          Col·legi Santa Teresa Ganduxer
+        </h6>
+        <small>
+          <span>September</span> 2006
+          <span>&gt;</span>
+          <span>June</span> 2016
+        </small>
+      </div>
+    </div>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>Español</h5>
+      <p>Native</p>
+    </div>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>Català</h5>
+      <p>Native</p>
+    </div>
+  </div>
+</section>
 
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5 waffle-lang="education.school.title">Primary, Middle School and Baccalaureate</h5>
-                    <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="education.place.stj">
-                                Col·legi Santa Teresa Ganduxer
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2003
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.june">June</span> 2018
-                            </small>
-                        </div>
-                    </div>
-                </div>
-
-                <h4 class="mt-4" waffle-lang="education.languages.title">Languages</h4>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5>English</h5>
-                    <p waffle-lang="education.languages.english-level">Medium/High (B2 in CEFRscale)</p>
-                    <p class="mb-3" waffle-lang="education.languages.english-description">
-                        Excellent reading and listening comprehension and fluent speaking in professional and
-                        non-professional environments.
-                    </p>
-                    <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="education.place.ien">
-                                Institut d'Estudis Nord-Americans
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2017
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.june">June</span> 2019
-                            </small>
-                        </div>
-                        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
-                            <i class="bi bi-plus d-block d-lg-none"></i>
-                            <i class="bi bi-plus d-none d-lg-block"></i>
-                        </span>
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="education.place.stj">
-                                Col·legi Santa Teresa Ganduxer
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2003
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.june">June</span> 2018
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5>Français</h5>
-                    <p waffle-lang="education.languages.french-level">Medium (DELF B1)</p>
-                    <p class="mb-3" waffle-lang="education.languages.french-description">
-                        Good reading and listening comprehension and basic speaking skills in non-profesional
-                        environments.
-                    </p>
-                    <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                        <h6 waffle-lang="education.place.stj">
-                            Col·legi Santa Teresa Ganduxer
-                        </h6>
-                        <small>
-                            <span waffle-lang="literal.september">September</span> 2006
-                            <span>&gt;</span>
-                            <span waffle-lang="literal.june">June</span> 2016
-                        </small>
-                    </div>
-                </div>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5>Español</h5>
-                    <p waffle-lang="literal.native">Native</p>
-                </div>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5>Català</h5>
-                    <p waffle-lang="literal.native">Native</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience  -->
-        <section id="experience" class="section bg-body-tertiary bg-content my-3 p-4 p-sm-5 col-md-12 d-block rounded">
-            <h3 waffle-lang="experience.title">Professional experience</h3>
-            <div>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5 waffle-lang="experience.gft.name">GFT Group</h5>
-                    <p waffle-lang="experience.gft.description">Development and management of software
-                        applications, in a microservices based architecture, following quality and efficiency
-                        standards. Working within an internacional development team backed by a Scrum project
-                        management strategy.</p>
-                    <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="experience.position.backend-software-engineer-skilled">
-                                Backend Software Engineer - Skilled
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.february">February</span> 2023
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.now">Now</span>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-start border-secondary ps-3 mt-3">
-                    <h5 waffle-lang="experience.ithinkupc.name">IThinkUPC</h5>
-                    <p waffle-lang="experience.ithinkupc.description">Development and management of
-                        software applications, mostly monolitic, following quality and efficiency standards. Working
-                        on the complete life cycle of these applications, from the gathering of requirements to
-                        their deployment and maintenance.</p>
-                    <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="experience.position.fullstack-software-developer-intern">
-                                FullStack Software Developer - Intern
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.september">September</span> 2020
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.march">March</span> 2022
-                            </small>
-                        </div>
-                        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
-                            <i class="bi bi-arrow-up d-block d-lg-none"></i>
-                            <i class="bi bi-arrow-right d-none d-lg-block"></i>
-                        </span>
-                        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
-                            <h6 waffle-lang="experience.position.fullstack-software-developer-junior">
-                                FullStack Software Developer - Junior
-                            </h6>
-                            <small>
-                                <span waffle-lang="literal.april">April</span> 2022
-                                <span>&gt;</span>
-                                <span waffle-lang="literal.august">August</span> 2022
-                        </div>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="container d-flex justify-content-center align-items-center flex-column my-3 p-5 col-md-12">
-        <h3 waffle-lang="footer.contact-me">Contact me!</h3>
-        <ul class="list-unstyled list-inline">
-            <li><a href="https://linkedin.com/in/alvaro-manoso" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-        </ul>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        init();
-    </script>
-</body>
-
-</html>
+<!-- Experience  -->
+<section id="experience" class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
+  <h3>Professional experience</h3>
+  <div>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>GFT Group</h5>
+      <p>Development and management of software
+        applications, in a microservices based architecture, following quality and efficiency
+        standards. Working within an internacional development team backed by a Scrum project
+        management strategy.</p>
+      <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            Backend Software Engineer - Skilled
+          </h6>
+          <small>
+            <span>February</span> 2023
+            <span>&gt;</span>
+            <span>Now</span>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="border-start border-secondary ps-3 mt-3">
+      <h5>IThinkUPC</h5>
+      <p>Development and management of
+        software applications, mostly monolitic, following quality and efficiency standards. Working
+        on the complete life cycle of these applications, from the gathering of requirements to
+        their deployment and maintenance.</p>
+      <div class="d-flex align-items-center flex-column-reverse flex-lg-row">
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            FullStack Software Developer - Intern
+          </h6>
+          <small>
+            <span>September</span> 2020
+            <span>&gt;</span>
+            <span>March</span> 2022
+          </small>
+        </div>
+        <span class="d-block text-secondary py-4 py-lg-0 px-lg-4">
+          <i class="bi bi-arrow-up d-block d-lg-none"></i>
+          <i class="bi bi-arrow-right d-none d-lg-block"></i>
+        </span>
+        <div class="d-inline-block bg-info bg-opacity-10 p-2 rounded align-self-stretch">
+          <h6>
+            FullStack Software Developer - Junior
+          </h6>
+          <small>
+            <span>April</span> 2022
+            <span>&gt;</span>
+            <span>August</span> 2022
+        </div>
+        </small>
+      </div>
+    </div>
+  </div>
+</section>
