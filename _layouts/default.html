@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="bg-body">
+
+    {% include navbar.html %}
+
+    {{ content }}
+    
+    <footer class="container d-flex justify-content-center align-items-center flex-column my-3 p-5 col-md-12">
+        <ul class="list-unstyled list-inline d-flex">
+            <li><a href="https://linkedin.com/in/alvaro-manoso" target="_blank"><i class="bi bi-linkedin p-1" style="color: #0077B5;"></i></a></li>
+            <li><a href="https://github.com/alvaromaoc" target="_blank"><i class="bi bi-github p-1" style="color: var(--bs-body-color);"></i></a></li>
+        </ul>
+        <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+        <p>Currently v{{ site.version }}</p>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="cookiesToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header">
+                <strong class="me-auto">Cookies in {{ site.title }}</strong>
+                <small id="cookiesToastTime">11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                We use cookies to enhance your browsing experience and personalize our website to better suit your
+                preferences. These cookies are solely used to save your personalization choices, such as your selected
+                theme and other customization settings. By clicking "Consent" below, you agree to the use of these
+                cookies for personalization purposes. You can manage and change your cookie preferences at any time by
+                accessing your browser settings.
+                <div class="mt-2 pt-2 border-top">
+                    <button type="button" class="btn btn-primary btn-sm" id="btnConsentCookies" data-bs-dismiss="toast" aria-label="Close">Consent</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toastTrigger = document.getElementById('btnConsentCookies')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                setCookie('cookiesEnabled', 'true', 365);
+            })
+        }
+
+        if (getCookie('cookiesEnabled') !== 'true') {
+            const cookiesToastTime = document.getElementById('cookiesToastTime')
+            cookiesToastTime.innerText = getCurrentHoursAndMinutes();
+
+            const cookiesToast = document.getElementById('cookiesToast');
+            const toast = bootstrap.Toast.getOrCreateInstance(cookiesToast)
+            toast.show()
+        }
+    </script>
+</body>
+
+</html>

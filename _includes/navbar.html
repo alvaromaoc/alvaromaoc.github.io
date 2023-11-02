@@ -12,11 +12,9 @@
           {% if page_depth <= 2 %}
             {% if node.title != null %}
               {% if node.layout == "page" %}
-                {% if node.title != "Not found" %}
                 <li class="nav-item">
                   <a href="{{ node.url }}" class="nav-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
                 </li>
-                {% endif %}
               {% endif %}
             {% endif %}
           {% endif %}

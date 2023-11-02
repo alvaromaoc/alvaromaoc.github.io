@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<main class="container">
+  <article class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
+    <h1 class="h2">{{ page.title }}</h1>
+    <small>{{ page.date | date_to_string }}</small>
+    <hr class="my-4">
+    <div>
+      {{ content }}
+    </div>
+  </article>
+</main>

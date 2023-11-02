@@ -4,7 +4,7 @@ title: Blog
 ---
 {% for post in paginator.posts %}
 <article class="bg-body-tertiary my-3 p-4 p-sm-5 col-md-12 d-block rounded">
-  <h2>{{ post.title }}</h2>
+  <h2><a class="text-decoration-none text-reset fw-medium" href="{{ post.url }}">{{ post.title }}</a></h2>
   <small>{{ post.date | date_to_string }}</small>
   <hr class="my-4">
   <div>
