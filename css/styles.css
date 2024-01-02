@@ -1,4 +1,79 @@
+:root {
+  --background-color: #fff;
+  --background-image:
+    radial-gradient(at 30% -10%, hsl(216, 45%, 83%) 0px, transparent 50%),
+    radial-gradient(at 70% 110%, hsl(216, 45%, 83%) 0px, transparent 50%);
+
+  --foreground-color: #464646;
+  --card-background: rgba(251, 251, 251, 0.5);
+  --card-border-radius: 16px;
+  --card-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
+  --card-backdrop-filter: blur(7px);
+  --card-border: 1px solid #fbfbfb;
+}
+
+[data-theme="dark"] {
+  --background-color: #000;
+  --background-image:
+    radial-gradient(at 30% -10%, hsl(216, 55%, 17%) 0px, transparent 50%),
+    radial-gradient(at 70% 110%, hsl(216, 55%, 17%) 0px, transparent 50%);
+
+  --foreground-color: #C7C7C7;
+  --card-background: rgba(14, 12, 12, 0.5);
+  --card-border-radius: 16px;
+  --card-box-shadow: 0 4px 30px rgba(255, 255, 255, 0.07);
+  --card-backdrop-filter: blur(7px);
+  --card-border: 1px solid #0e0e0e
+}
+
+body {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+p {
+  line-height: 2;
+}
+
+.card {
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  backdrop-filter: var(--card-backdrop-filter);
+  -webkit-backdrop-filter: var(--card-backdrop-filter);
+  border: var(--card-border);
+}
+
+.quote {
+  font-style: italic;
+  border-left: 4px solid var(--bs-body-color); /* Adjust the color and width of the line */
+  padding-left: 10px; /* Add some padding to separate the line from the text */
+}
+
 * {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  width: fit-content;
+  font-weight: 700;
+  background: linear-gradient(90deg, hsla(167, 60%, 60%, 1), hsla(221, 60%, 60%, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: normal;
+  color: transparent;
+}
+
+footer ul li {
+  padding-right: 10px;
+}
+
+footer ul li:last-child {
+  padding-right: 0;
 }

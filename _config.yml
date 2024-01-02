@@ -1,22 +1,15 @@
 # Setup
-title:               Alvaro's Portfolio
-tagline:             'Full Stack Software Engineer'
-description:         'Full Stack Software Engineer expert Java-Spring and Angular development'
+title:               Álvaro Mañoso Oca
+tagline:             'Software Architect Consultant'
+description:         'Software Architect Consultant'
 url:                 https://alvaromaoc.dev
 baseurl:             ''
-paginate:            5
-paginate_path:       "/blog/:num/"
-permalink:           pretty
 
 # About/contact
 author:
   name:              Álvaro Mañoso Oca
   url:               https://linkedin.com/in/alvaro-manoso
   email:             me@alvaromaoc.dev
-
-# Gems
-plugins:
-  - jekyll-paginate
 
 # Custom vars
 version:             1.1.0
