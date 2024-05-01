@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-bg-body {
+  @apply bg-body-900;
+}
+
+.my-container {
+  @apply container mx-auto max-w-7xl px-5 sm:px-10;
+}
+
+.text-link {
+  @apply underline text-accent-500
+}

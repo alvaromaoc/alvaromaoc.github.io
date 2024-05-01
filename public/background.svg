@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+    <defs>
+        <radialGradient id="a-0" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0" stop-color="hsla(74,99%,87%,1)">
+                <animate attributeName="stop-color" dur="20s" repeatCount="indefinite" values="hsla(74,99%,87%,1);hsla(87,53%,69%,1);hsla(74,99%,87%,1)"></animate>
+            </stop>
+            <stop offset="1" stop-color="hsla(74,99%,87%,0)" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="a-1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0" stop-color="hsla(135,83%,78%,1)">
+                <animate attributeName="stop-color" dur="20s" repeatCount="indefinite" values="hsla(135,83%,78%,1);hsla(87,84%,97%,1);hsla(135,83%,78%,1)"></animate>
+            </stop>
+            <stop offset="1" stop-color="hsla(135,83%,78%,0)" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="a-2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0" stop-color="hsla(78,75%,97%,1)">
+                <animate attributeName="stop-color" dur="20s" repeatCount="indefinite" values="hsla(78,75%,97%,1);hsla(97,75%,77%,1);hsla(78,75%,97%,1)"></animate>
+            </stop>
+            <stop offset="1" stop-color="hsla(78,75%,97%,0)" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="a-3" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0" stop-color="hsla(105,86%,63%,1)">
+                <animate attributeName="stop-color" dur="20s" repeatCount="indefinite" values="hsla(105,86%,63%,1);hsla(72,95%,88%,1);hsla(105,86%,63%,1)"></animate>
+            </stop>
+            <stop offset="1" stop-color="hsla(105,86%,63%,0)" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="a-4" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0" stop-color="hsla(122,58%,59%,1)">
+                <animate attributeName="stop-color" dur="20s" repeatCount="indefinite" values="hsla(122,58%,59%,1);hsla(86,63%,71%,1);hsla(122,58%,59%,1)"></animate>
+            </stop>
+            <stop offset="1" stop-color="hsla(122,58%,59%,0)" stop-opacity="0"></stop>
+        </radialGradient>
+    </defs>
+    <rect fill="hsla(208,80%,59%,1)" width="100%" height="100%"></rect>
+    <ellipse cx="29%" cy="90%" ry="60%" rx="65%" fill="url(#a-4)">
+        <animate attributeName="cy" dur="20s" repeatCount="indefinite" values="90%;45%;90%"></animate>
+        <animate attributeName="cx" dur="20s" repeatCount="indefinite" values="29%;51%;29%"></animate>
+    </ellipse>
+    <ellipse cx="14%" cy="67%" ry="60%" rx="65%" fill="url(#a-3)">
+        <animate attributeName="cy" dur="20s" repeatCount="indefinite" values="67%;40%;67%"></animate>
+        <animate attributeName="cx" dur="20s" repeatCount="indefinite" values="14%;3%;14%"></animate>
+    </ellipse>
+    <ellipse cx="28%" cy="92%" ry="60%" rx="65%" fill="url(#a-2)">
+        <animate attributeName="cy" dur="20s" repeatCount="indefinite" values="92%;23%;92%"></animate>
+        <animate attributeName="cx" dur="20s" repeatCount="indefinite" values="28%;21%;28%"></animate>
+    </ellipse>
+    <ellipse cx="45%" cy="17%" ry="60%" rx="65%" fill="url(#a-1)">
+        <animate attributeName="cy" dur="20s" repeatCount="indefinite" values="17%;40%;17%"></animate>
+        <animate attributeName="cx" dur="20s" repeatCount="indefinite" values="45%;18%;45%"></animate>
+    </ellipse>
+    <ellipse cx="74%" cy="11%" ry="60%" rx="65%" fill="url(#a-0)">
+        <animate attributeName="cy" dur="20s" repeatCount="indefinite" values="11%;31%;11%"></animate>
+        <animate attributeName="cx" dur="20s" repeatCount="indefinite" values="74%;97%;74%"></animate>
+    </ellipse>
+</svg>
