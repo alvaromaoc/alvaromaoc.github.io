@@ -25,10 +25,19 @@
       <input class="form-check-input" type="checkbox" role="switch" id="darkMode">
       <label class="form-check-label" for="darkMode" waffle-lang="literal.dark-mode">Dark mode</label>
     </div>
-    <script>
-      const darkModeSwitch = document.getElementById('darkMode');
-      darkModeSwitch.checked = document.documentElement.getAttribute("data-bs-theme") == "dark";
-      darkModeSwitch.addEventListener('click', () => setTheme(darkModeSwitch.checked));
-    </script>
   </div>
 </nav>
+
+<script type="module">
+  import { changeToDarkTheme, changeToLightTheme, isDarkCurrentTheme } from '/js/theme.js'
+
+  const darkModeSwitch = document.getElementById('darkMode');
+  darkModeSwitch.checked = isDarkCurrentTheme();
+  darkModeSwitch.addEventListener('click', () => {
+    if (darkModeSwitch.checked) {
+      changeToDarkTheme();
+    } else {
+      changeToLightTheme();
+    }
+  });
+</script>
