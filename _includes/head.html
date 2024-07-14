@@ -32,7 +32,9 @@
     <meta rel="og:url" href="{{ site.url }}">
     {% endif %}
 
-    {% if page.layout == "default" %}
+    {% if page.layout == "page" %}
+    <meta name="robots" content="index,follow">
+    {% else %}
     <meta name="robots" content="noindex,nofollow">
     {% endif %}
 

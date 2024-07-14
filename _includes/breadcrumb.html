@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+    {% assign segments = page.url | split: '/' %}
+    {% assign num_segments = segments | size %}
+    {% if num_segments != 2 %}
+        {% assign path = '' %}
+        {% for segment in segments %}
+        {% unless segment == '' %}
+        {% assign path = path | append: '/' | append: segment %}
+        {% assign title = segment | replace: '-', ' ' | capitalize %}
+        {% if forloop.last %}
+        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        {% else %}
+        <li class="breadcrumb-item"><a href="{{ path | relative_url }}">{{ title }}</a></li>
+        {% endif %}
+        {% endunless %}
+        {% endfor %}
+    {% else %}
+    {% endif %}
+</ol>

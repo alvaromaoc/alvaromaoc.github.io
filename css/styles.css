@@ -50,8 +50,8 @@ p {
 
 .quote {
   font-style: italic;
-  border-left: 4px solid var(--bs-body-color); /* Adjust the color and width of the line */
-  padding-left: 10px; /* Add some padding to separate the line from the text */
+  border-left: 4px solid var(--bs-body-color);
+  padding-left: 10px;
 }
 
 * {
